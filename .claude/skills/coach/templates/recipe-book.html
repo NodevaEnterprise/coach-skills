@@ -51,4 +51,14 @@ html, body { margin: 0; background: #fff; }
 .st .n { width: 30px; height: 30px; flex: none; border-radius: 15px; background: var(--accent); color: #fff; font-size: 15px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
 .small .rt { font-size: 42px; } .small .il, .small .st { font-size: 16.5px; padding: 6px 0; } .small .cols { margin-top: 18px; } .small .nums { margin-top: 16px; }
 .small .nums .v { font-size: 30px; }
-</style></head><body>{{pages}}</body></html>
+</style></head><body>{{pages}}
+<script>
+// a long recipe never runs off the page: the card first grows up over the photo, then the list text gets a little smaller
+document.fonts.ready.then(() => document.querySelectorAll('.panel').forEach(p => {
+  const over = () => p.scrollHeight > p.clientHeight + 1;
+  let top = parseFloat(getComputedStyle(p).top);
+  while (over() && top > 340) { top -= 20; p.style.top = top + 'px'; }
+  let fs = 16.5;
+  while (over() && fs > 13) { fs -= 0.5; p.querySelectorAll('.il, .st').forEach(e => { e.style.fontSize = fs + 'px'; e.style.padding = '4px 0'; }); }
+}));
+</script></body></html>
