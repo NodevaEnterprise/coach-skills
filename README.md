@@ -1,0 +1,92 @@
+# /coach: Claude skills for fitness coaches
+
+Six tools inside Claude Code. Type `/coach`, pick one, and get a finished file you can send to a client or post.
+
+![What it makes](preview.jpg)
+
+| Type | Give it | You get |
+|---|---|---|
+| `/coach audio` | A video or voice note filmed in the gym | The same clip with a clean, clear voice at Instagram loudness, plus a before/after picture |
+| `/coach anatomy` | An exercise ("shoulder press") | A drawn body with the muscles it works glowing, on a transparent background for your edits. Male or female, white or black lines, eight glow colours |
+| `/coach macros` | Your client's height, weight, age and goal | A branded macro card (image and PDF) with their calories, protein, carbs and fat |
+| `/coach meals` | What they like and don't eat | A recipe book and a weekly grocery list that hit those macros |
+| `/coach transform` | Your client's before and after photos | A before/after reveal: both bodies cut out on a dark studio, a scan line swaps the before for the after, callouts on what changed. Video, still and reel cover. The body itself is never edited: only the lighting, skin colour, clarity and size are matched |
+| `/coach edit` | Your raw footage | The full edit. See below |
+
+## Install it (2 minutes)
+
+You need **Claude Code**: the Claude desktop app (claude.ai/download) on a paid plan, then the **Code** tab.
+
+1. Open the Code tab and choose any folder.
+2. Paste this and press Enter:
+
+       Install the coach skills from github.com/NodevaEnterprise/coach-skills
+
+3. **Connect Gemini** when Claude asks. A page opens in your browser: create a free key at Google AI Studio, paste it and
+   click Save. Gemini draws any muscle the pack doesn't have yet and the food photo for every recipe (about 4 cents an image,
+   charged by Google). The key stays on your computer.
+4. Type `/coach`. If it doesn't show up yet, start a new chat.
+
+That's it. It works in every folder from now on.
+
+The first time you make a macro card or recipe book, Claude asks a few quick questions: your business name, your Instagram
+handle, your logo, your accent colour and your heading font (pick from nine, or upload your own). The designs stay the same;
+your brand goes on them.
+
+## Using it
+
+Just talk to it:
+
+- `/coach macros Sarah, 29, female, 168cm, 82kg, fat loss, goal 75kg, trains 4 days`
+- `/coach meals` and it asks what she likes, what she won't eat, and how simple the recipes should be
+- `/coach anatomy bulgarian split squat, female body`
+- `/coach audio` and drag in your clip
+- `/coach transform`, drag in the before photo, then the after, and say the client's name
+
+Plain English works too: "work out macros for my new client" or "clean up the audio on this" both trigger it.
+
+Everything lands in **Documents, Coach Skills**, one folder per client, and the folder opens by itself.
+
+## What you need
+
+- Claude Code (above)
+- Google Chrome, which draws the cards and books (most computers already have it)
+- A Google AI Studio key for Gemini (free to create; images cost about 4 cents each on Google's side)
+- A Mac, Windows or Linux computer
+
+The first `/coach transform` downloads two free models, about 200 MB in total. After that it runs offline.
+
+Your clips and your clients' details stay on your computer. Only a muscle drawing or a dish description goes to your own
+Gemini account when a new image is needed.
+
+## /coach edit
+
+The full video edit (your raw footage in, then the cut, captions, sound and colour) isn't in this free pack. To get it,
+**message [@thea_berntsen](https://ig.me/m/thea_berntsen) on Instagram** with the word **COACH**.
+
+## Good to know
+
+- Macros use the Mifflin-St Jeor formula with your client's job and training days, then a goal adjustment. Treat them as a
+  starting point and adjust from their check-ins.
+- The meal planner works out every recipe's macros from a nutrition table, then scales the portions until each meal hits its
+  share of the day. Pick one recipe per meal and the day adds up.
+- The transformation reveal cuts the body out with a free person cut-out model (rembg), finds the shoulders and hips with
+  Google's MediaPipe, and matches the two photos with one uniform scale (torso to torso), the exposure and the skin colour.
+  Nothing reshapes the body, so what the video shows is what happened. Front-on photos at a similar distance work best.
+- A muscle the pack doesn't have yet (rhomboids, rotator cuff and so on) is drawn by your Gemini when you ask for it. Look at it
+  before you post: if it colours more than the muscle, ask Claude to try again with a clearer description.
+- The audio clean-up is a free noise-removal model. It handles gym noise, fans and crowd well. Music as loud as your voice
+  will still come through.
+
+## Credits
+
+Based on [coach-skills](https://github.com/corbinsylk/coach-skills) by Corbin Sylk ([@corbinsylk](https://www.instagram.com/corbinsylk/)),
+under the MIT licence. This version by Thea Berntsen ([@thea_berntsen](https://www.instagram.com/thea_berntsen/)) has its own
+design, its own body drawings and food photos, and a transformation reveal that runs on every computer.
+
+Noise removal: the RNNoise model from [GregorR/rnnoise-models](https://github.com/GregorR/rnnoise-models) running in FFmpeg.
+Person cut-out: [rembg](https://github.com/danielgatis/rembg). Body pose: [MediaPipe](https://github.com/google-ai-edge/mediapipe).
+Fonts: Plus Jakarta Sans, Inter, Montserrat, DM Sans, Poppins, Playfair Display, Fraunces, Lora and DM Serif Display (SIL Open
+Font License, included). Body drawings and food photos were made for this pack with Gemini.
+
+The code is under the MIT licence. Use everything it makes for your clients and your content, commercial use included.
